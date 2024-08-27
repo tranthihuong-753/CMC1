@@ -1,0 +1,34 @@
+--Find the titles of courses in the Comp. Sci. department that have 3 credits.
+/*
+SELECT title
+FROM course
+WHERE dept_name='the Comp. Sci. department' and credits=3;
+*/
+
+--Findthe IDs of all students who were taught by an instructor named Einstein; make sure there are no duplicates in the result.
+/*
+--Từ khóa DISTINCT loạibor sự trùng lặp ở đầu ra 
+SELECT DISTINCT student.ID 
+FROM student, instructer 
+WHERE instructer.name='Einstein';
+*/
+
+--Find the highest salary of any instructor.
+/*
+--Hàm MAX để tìm lương cao nhất , và đặt tên cho cột đầu ra là highest_salary
+SELECT MAX(salary) AS highest_salary
+FROM instructer;
+*/
+
+--Find all instructors earning the highest salary (there may be more than one with the same salary).
+/*
+--Không thể dùng trực tiếp hàm MAX ở WHERE
+SELECT name
+FROM instructer
+WHERE salary = (SELECT MAX(salary) FROM instructer);
+*/
+
+--Find the enrollment of each section that was offered in Autumn 2009.
+--Find the maximum enrollment, across all sections, in Autumn 2009.
+--Find the sections that had the maximum enrollment in Autumn2009.
+

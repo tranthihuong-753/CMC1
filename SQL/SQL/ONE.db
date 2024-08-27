@@ -1,0 +1,58 @@
+CREATE TABLE classroom(
+    building CHAR(50),
+    room_number CHAR(5),
+    capacity CHAR(50)
+);
+
+CREATE TABLE department(
+    dept_name CHAR(50),
+    building CHAR(50),
+    --ngân sách 
+    budget INT 
+);
+
+CREATE TABLE course (
+    course_id INT,
+    --tiêu đề 
+    title CHAR(50),
+    dept_name CHAR(50) 
+);
+
+CREATE TABLE instructer (
+    ID INT ,
+    name CHAR(50),
+    dept_name CHAR(50),
+    salary INT 
+);
+
+CREATE TABLE section (
+    course_id INT ,
+    sec_id INT ,
+    --học kỳ
+    semester INT,
+    
+);
+
+CREATE TABLE (
+    
+);
+
+CREATE TABLE (
+    
+);
+
+CREATE TABLE (
+    
+);
+
+CREATE TABLE (
+    
+);
+
+CREATE TABLE (
+    
+);
+
+CREATE TABLE (
+    
+);
